@@ -72,10 +72,8 @@ const Game: React.FC = () => {
         [state],
     )
     
-
     const gameStart = useCallback(
         (gameState: any, players: Array<[]>, piece: string) => {
-            // const opponent = players.filter(([id, name]) => id !== socketID)[0][1]
             const opponent = 'opponent'
             setState({ ...state, opponentPlayer: [opponent, 0], end: false })
             setBoard(gameState)
